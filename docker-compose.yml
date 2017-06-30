@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  django:
+    build: .
+    image: django:0.1.1
+    container_name: django_dlp
+    volumes:
+      - ./django.prj:/app
+    ports:
+      - 8000:8000
+

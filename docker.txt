@@ -1,0 +1,6 @@
+docker run --detach --name django -p 8000:80 chapdev/alpine-nginx-django
+docker exec -it django /bin/bash
+
+
+
+
