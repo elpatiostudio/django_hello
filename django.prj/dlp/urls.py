@@ -12,6 +12,15 @@ def home(request):
     return render(request, 'base.html', context)
 
 
+def contact(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'contact.html', context)
+
+
 urlpatterns = [
     url('^$', home),
+    url('^contact/', contact),
 ]
