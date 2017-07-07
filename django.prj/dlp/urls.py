@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    name = request.GET['name']
+    name = request.GET.get('name', 'User')
     context = {
         'name': name,
         'features': ['cheap', 'fast', 'easy', ],
