@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block html_title %}{{ block.super }} - Home{% endblock html_title %}
+
+{% block content %}
+	<ul>
+		{% for feature in features %}
+			<li>{{ feature }}</li>
+		{% endfor %}
+	</ul>
+{% endblock content %}

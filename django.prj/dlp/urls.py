@@ -1,15 +1,26 @@
 from django.conf.urls import url
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def index(request):
-	return HttpResponse('Hello World 2')
+def home(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'features': ['cheap', 'fast', 'easy', ],
+    }
+    return render(request, 'home.html', context)
 
-def bye(request):
-	return HttpResponse('Chau')
+
+def contact(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'contact.html', context)
 
 
 urlpatterns = [
-    url('hello/', index),
-    url('bye/', bye),
+    url('^$', home),
+    url('^contact/', contact),
 ]
