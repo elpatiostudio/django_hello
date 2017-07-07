@@ -4,8 +4,11 @@ from django.shortcuts import render
 
 
 def index(request):
-	name = request.GET['name']
-	return render(request, 'base.html', {'name': name})
+    name = request.GET['name']
+    context = {
+        'name': name
+    }
+    return render(request, 'base.html', context)
 
 
 urlpatterns = [
