@@ -54,7 +54,7 @@ ROOT_URLCONF = 'dlp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['dlp/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

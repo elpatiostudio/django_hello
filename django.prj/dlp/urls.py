@@ -1,15 +1,12 @@
 from django.conf.urls import url
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-	return HttpResponse('Hello World 2')
-
-def bye(request):
-	return HttpResponse('Chau')
+	return render(request, 'base.html')
 
 
 urlpatterns = [
-    url('hello/', index),
-    url('bye/', bye),
+    url('', index),
 ]
