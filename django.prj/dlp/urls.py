@@ -6,7 +6,8 @@ from django.shortcuts import render
 def home(request):
     name = request.GET['name']
     context = {
-        'name': name
+        'name': name,
+        'features': ['cheap', 'fast', 'easy', ],
     }
     return render(request, 'base.html', context)
 
