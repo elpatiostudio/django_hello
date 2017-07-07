@@ -13,5 +13,5 @@ def home(request):
 
 
 urlpatterns = [
-    url('', home),
+    url('^$', home),
 ]
