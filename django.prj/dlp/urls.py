@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def index(request):
+def home(request):
     name = request.GET['name']
     context = {
         'name': name
@@ -12,5 +12,5 @@ def index(request):
 
 
 urlpatterns = [
-    url('', index),
+    url('', home),
 ]
