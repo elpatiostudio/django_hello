@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Django Learning Path</title>
-	</head>
-	<body>
-		<h1>Hello {{ name }}</h1>
-		<a href="mailto:test@test.com">Send us an email</a>
-	</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+	<a href="mailto:test@test.com">Send us an email</a>
+{% endblock content %}

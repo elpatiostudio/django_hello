@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<ul>
+		{% for feature in features %}
+			<li>{{ feature }}</li>
+		{% endfor %}
+	</ul>
+{% endblock content %}

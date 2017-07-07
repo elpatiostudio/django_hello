@@ -9,7 +9,7 @@ def home(request):
         'name': name,
         'features': ['cheap', 'fast', 'easy', ],
     }
-    return render(request, 'base.html', context)
+    return render(request, 'home.html', context)
 
 
 def contact(request):
