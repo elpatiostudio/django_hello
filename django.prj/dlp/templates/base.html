@@ -4,6 +4,9 @@
 		<title>{% block html_title %}Django Learning Path{% endblock html_title %}</title>
 	</head>
 	<body>
+		{% block main_menu %}
+			{% include "main_menu.html" %}
+		{% endblock %}
 		<h1>Hello {{ name }}</h1>
 		{% block content %}
 		Here you will place the content
