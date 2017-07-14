@@ -24,4 +24,12 @@ def products(request):
     }
     return render(request, 'products.html', context)
 
+def services(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'services.html', context)
+
+
 
