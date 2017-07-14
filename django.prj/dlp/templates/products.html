@@ -4,4 +4,9 @@
 
 {% block content %}
 	<h2>This are the products we're offering at the moment</h2>
+		<ul>
+		{% for product in products_list %}
+			<li>{{ product }}</li>
+		{% endfor %}
+	</ul>
 {% endblock content %}

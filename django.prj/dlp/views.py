@@ -19,8 +19,10 @@ def contact(request):
 
 def products(request):
     name = request.GET.get('name', 'User')
+    product = request.GET.get('product', 'No Products Avaliable').split(',')
     context = {
         'name': name,
+        'products_list': product,
     }
     return render(request, 'products.html', context)
 
