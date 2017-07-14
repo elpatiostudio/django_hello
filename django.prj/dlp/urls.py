@@ -1,5 +1,7 @@
 from django.conf.urls import url
-from views import home, contact, team
+
+
+from views import home, contact, products, team
 
 
 urlpatterns = [
