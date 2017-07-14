@@ -16,3 +16,12 @@ def contact(request):
         'name': name,
     }
     return render(request, 'contact.html', context)
+
+def team(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'team.html', context)
+
+
