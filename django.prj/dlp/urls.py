@@ -1,5 +1,7 @@
 from django.conf.urls import url
-from views import home, contact, products, team, members
+
+from views import home, contact, products, team, members, portfolio, services
+
 
 
 urlpatterns = [
@@ -8,4 +10,6 @@ urlpatterns = [
     url('^team/', team),
     url('^products', products),
     url('^members', members), 
+    url('^portfolio/', portfolio),
+    url('^services/', services),
 ]
