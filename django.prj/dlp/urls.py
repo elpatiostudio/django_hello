@@ -6,6 +6,7 @@ urlpatterns = [
     url('^$', home),
     url('^contact/', contact), 
     url('^team/', team),
-    url('^products', products), 
-    url('^portfolio', portfolio), 
+    url('^products/', products), 
+    url('^portfolio/', portfolio),
+    url('^services/', services),
 ]
