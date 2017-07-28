@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from data.shows import SHOWS_LIST
 from main.models import Member
 from data.news import NEWS
 
@@ -82,4 +83,10 @@ def news(request):
 
 
 
-
+def shows(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'shows': SHOWS_LIST,
+    }
+    return render(request, 'shows.html', context)
