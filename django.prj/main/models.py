@@ -8,3 +8,12 @@ class Member(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     instrument = models.CharField(max_length=200)
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),
+        ('O', 'Other'),
+    )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    
+
+    
