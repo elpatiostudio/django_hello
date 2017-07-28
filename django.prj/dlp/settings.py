@@ -100,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+ADMIN_URL = r'^admin/'
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
