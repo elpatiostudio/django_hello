@@ -5,4 +5,6 @@ from django.db import models
 
 
 class Member(models.Model):
-    name = models.TextField()
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    instrument = models.CharField(max_length=200)
