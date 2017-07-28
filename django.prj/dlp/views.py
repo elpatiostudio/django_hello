@@ -68,6 +68,14 @@ def news(request):
     }
     return render(request, 'news.html', context)
 
+    def gallery(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'gallery.html', context)
+
+
 
 
 
