@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from data.members import MEMBERS
+from main.models import Member
 
 
 def home(request):
@@ -40,7 +41,7 @@ def members(request):
     name = request.GET.get('name', 'User')
     context = {
         'name': name,
-        'members': MEMBERS,
+        'members': Member.objects.all(),
     }
     return render(request, 'members.html', context)
 
