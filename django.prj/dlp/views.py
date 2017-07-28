@@ -1,10 +1,6 @@
 from django.shortcuts import render
-from data.members import MEMBERS
-<<<<<<< HEAD
 from main.models import Member
-=======
 from data.news import NEWS
->>>>>>> b351f96cefec4068cadd620e2c2894b5d8c7f46c
 
 
 def home(request):

@@ -1,9 +1,7 @@
 from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
-
 from views import home, contact, products, team, members, portfolio, services, news
-
 
 
 urlpatterns = [
