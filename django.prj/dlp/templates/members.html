@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block html_title %}{{ block.super }} - Members{% endblock html_title %}
+
+{% block content %}
+
+	{% for person in members %}
+		<ul>
+			<li>{{ person.name }}</li>
+		</ul>
+	{% endfor %}
+
+{% endblock content %}

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from data.shows import SHOWS_LIST
+from main.models import Member
+from data.news import NEWS
 
 
 def home(request):
@@ -36,6 +38,20 @@ def team(request):
     }
     return render(request, 'team.html', context)
 
+def members(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'members': Member.objects.all(),
+    }
+    return render(request, 'members.html', context)
+
+def portfolio(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'portfolio.html', context)
 
 def services(request):
     name = request.GET.get('name', 'User')
@@ -44,13 +60,19 @@ def services(request):
     }
     return render(request, 'services.html', context)
 
-def portfolio(request):
+
+def news(request):
     name = request.GET.get('name', 'User')
     context = {
         'name': name,
-        'works': ['work 1', 'work 2', 'work 3', ],
+        'news': NEWS,
     }
-    return render(request, 'portfolio.html', context)
+    return render(request, 'news.html', context)
+
+
+
+
+
 
 
 def shows(request):
