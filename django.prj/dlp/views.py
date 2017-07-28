@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from data.members import MEMBERS
+<<<<<<< HEAD
 from main.models import Member
+=======
+from data.news import NEWS
+>>>>>>> b351f96cefec4068cadd620e2c2894b5d8c7f46c
 
 
 def home(request):
@@ -58,6 +62,15 @@ def services(request):
         'name': name,
     }
     return render(request, 'services.html', context)
+
+
+def news(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'news': NEWS,
+    }
+    return render(request, 'news.html', context)
 
 
 

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block html_title %}{{ block.super }} - News{% endblock html_title %}
+
+{% block content %}
+
+{% for article in news %}
+		<article>
+			<h2>{{ article.title }}</h2>
+			<p>{{ article.excerpt }}</p>
+		</article>
+		{% endfor %}
+
+{% endblock content %}
