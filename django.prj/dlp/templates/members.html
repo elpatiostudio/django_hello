@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block html_title %}{{ block.super }} - Members{% endblock html_title %}
+
+{% block content %}
+
+{% for person in members %}
+			<ul>
+				<li>{{ person.name }}</li>
+				<li> <img src="{{person.image}}"> </li>
+				<li> <p>{% if person.gender == "male" %} He {% else %} She {% endif %} uses the {{person.instrument}} </p> </li>
+			</ul>
+		{% endfor %}
+	
+{% endblock content %}

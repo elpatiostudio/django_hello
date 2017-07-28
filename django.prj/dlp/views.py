@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from data.members import MEMBERS
 
 
 def home(request):
@@ -35,6 +36,20 @@ def team(request):
     }
     return render(request, 'team.html', context)
 
+def members(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'members': MEMBERS,
+    }
+    return render(request, 'members.html', context)
+
+def portfolio(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+    }
+    return render(request, 'portfolio.html', context)
 
 def services(request):
     name = request.GET.get('name', 'User')
@@ -43,13 +58,10 @@ def services(request):
     }
     return render(request, 'services.html', context)
 
-def portfolio(request):
-    name = request.GET.get('name', 'User')
-    context = {
-        'name': name,
-        'works': ['work 1', 'work 2', 'work 3', ],
-    }
-    return render(request, 'portfolio.html', context)
+
+
+
+
 
 
 
