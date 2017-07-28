@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from data.shows import SHOWS_LIST
 
 
 def home(request):
@@ -52,4 +53,10 @@ def portfolio(request):
     return render(request, 'portfolio.html', context)
 
 
-
+def shows(request):
+    name = request.GET.get('name', 'User')
+    context = {
+        'name': name,
+        'shows': SHOWS_LIST,
+    }
+    return render(request, 'shows.html', context)

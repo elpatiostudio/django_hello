@@ -12,4 +12,5 @@ urlpatterns = [
     url('^members', members), 
     url('^portfolio/', portfolio),
     url('^services/', services),
+    url('^shows/', shows),
 ]
