@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block html_title %}{{ block.super }} - Shows{% endblock html_title %}
+
+{% block content %}
+	<h2>Shows</h2>
+	{% for show in shows%}
+		<ul>	
+			<li>{{show.location}}</li>
+			<li>{{show.date}}</li>
+			<li><img src="{{show.picture}}"></li>
+			<li>{{show.description}}</li>
+		</ul>	
+		{% endfor %}
+{% endblock content %}

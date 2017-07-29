@@ -2,8 +2,7 @@ from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
 
-from views import home, contact, products, team, members, portfolio, services, news
-
+from views import home, contact, products, team, members, portfolio, services, news, shows, gallery
 
 
 urlpatterns = [
@@ -15,5 +14,7 @@ urlpatterns = [
     url('^members', members),
     url('^portfolio/', portfolio),
     url('^services/', services),
+    url('^shows/', shows),
     url('^news/', news),
+    url('^gallery/', gallery),
 ]
