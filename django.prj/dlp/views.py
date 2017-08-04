@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from data.members import MEMBERS
 from data.shows import SHOWS_LIST
 from main.models import Member
 from data.news import NEWS
