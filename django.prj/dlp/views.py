@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from main.models import Member
 from data.news import NEWS
+from products.models import Product
 
 
 def home(request):
@@ -22,10 +23,9 @@ def contact(request):
 
 def products(request):
     name = request.GET.get('name', 'User')
-    product = request.GET.get('product', 'No Products Avaliable').split(',')
     context = {
         'name': name,
-        'products_list': product,
+        'products_list': Product.objects.all(),
     }
 
     return render(request, 'products.html', context)
