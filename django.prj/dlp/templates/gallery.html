@@ -1,3 +1,17 @@
 {% extends "base.html" %}
 
 {% block html_title %}{{ block.super }} - Gallery {% endblock html_title %}
+
+ 
+
+{%block content%}
+<div class="row">
+ {% for photo in gallery %}
+ 	<div class="col s3">
+         {{photo.image}}
+      </div>
+ {% endfor %}
+</div>
+      {%endblock content%}
+
+    
