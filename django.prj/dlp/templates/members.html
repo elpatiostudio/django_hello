@@ -4,13 +4,16 @@
 
 {% block content %}
 
+<div class="row">
 	{% for person in members %}
-		<ul>
-			<li>{{ person.name }}</li>
-			<li> {{ person.instrument }}</li>
-			<li> {{ person.description }}</li>
-			<li> {{ person.gender }}</li>
-		</ul>
+		 	<div class="col s3 center-align">
+			<img src="http://via.placeholder.com/200x200" class="circle">
+			<p><strong>{{ person.name }}</strong> </p>
+			<p> {{ person.instrument }}</p>
+			<p> {{ person.description }}</p>
+			<p> <small> {{ person.gender }} </small> </p> 
+		</div>
 	{% endfor %}
+	</div>
 
 {% endblock content %}
