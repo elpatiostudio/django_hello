@@ -3,10 +3,17 @@
 {% block html_title %}{{ block.super }} - Products{% endblock html_title %}
 
 {% block content %}
-	<h2>This are the products we're offering at the moment</h2>
+	
+		{% if products_list  %}
+		<h2>This are the products we're offering at the moment</h2>
 		<ul>
-		{% for product in products_list %}
-			<li>{{ product }}</li>
-		{% endfor %}
-	</ul>
+			{% for product in products_list %}
+			<li>{{ product.name }}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+		<h2>No Products Avaliable</h2>
+		{% endif %}
+		
+	
 {% endblock content %}
