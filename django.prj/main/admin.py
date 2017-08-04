@@ -5,4 +5,10 @@ from django.contrib import admin
 from models import Member
 
 
-admin.site.register(Member)
+class MemberAdmin(admin.ModelAdmin):
+    # fields = ('name', 'instrument',)
+    list_display = ('name', 'gender', 'instrument',)
+    search_fields = ('name', 'description', 'instrument',)
+    list_filter = ('gender',)
+
+admin.site.register(Member, MemberAdmin)
