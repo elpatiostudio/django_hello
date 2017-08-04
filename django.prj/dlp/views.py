@@ -3,7 +3,7 @@ from data.members import MEMBERS
 from data.shows import SHOWS_LIST
 from main.models import Member
 from data.news import NEWS
-
+from data.gallery import GALLERY
 
 def home(request):
     name = request.GET.get('name', 'User')
@@ -74,6 +74,8 @@ def gallery(request):
     name = request.GET.get('name', 'User')
     context = {
         'name': name,
+        'gallery': GALLERY,
+
     }
     return render(request, 'gallery.html', context)
 
