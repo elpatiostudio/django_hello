@@ -5,13 +5,18 @@
  
 
 {%block content%}
+
 <br>
 <div class="row">
  {% for photo in gallery %}
  	<div class="col s3">     
-       <img src="{{photo.image}}" alt="img" style="border-radius: 10px" height="200" width="200"> 
-      </div>
+             
+           <img class="materialboxed" data-caption="caption example 123..." style="border-radius: 10px" height="200" width="200"  src="{{photo.image}}">
+<br> 
+
+            </div>
  {% endfor %}
+
 <br> 
 </div>
 
