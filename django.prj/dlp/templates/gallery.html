@@ -5,13 +5,17 @@
  
 
 {%block content%}
+<br>
 <div class="row">
  {% for photo in gallery %}
- 	<div class="col s3">
-         {{photo.image}}
+ 	<div class="col s3">     
+       <img src="{{photo.image}}" alt="img" style="border-radius: 10px" height="200" width="200"> 
       </div>
  {% endfor %}
+<br> 
 </div>
+
+
       {%endblock content%}
 
     
