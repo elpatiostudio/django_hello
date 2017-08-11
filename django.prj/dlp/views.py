@@ -5,6 +5,7 @@ from main.models import Member
 from data.news import NEWS
 from data.gallery import GALLERY
 from products.models import Product
+from gallery.models import Gallery
 
 def home(request):
     name = request.GET.get('name', 'User')
@@ -74,7 +75,8 @@ def gallery(request):
     name = request.GET.get('name', 'User')
     context = {
         'name': name,
-        'gallery': GALLERY,
+        'gallery': Gallery.objects.all(),
+
 
     }
     return render(request, 'gallery.html', context)
