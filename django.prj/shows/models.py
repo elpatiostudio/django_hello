@@ -13,7 +13,7 @@ class Category(models.Model):
 class Show(models.Model):
     location = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
-    departament_shows = models.ForeignKey(Category)
+    departament_shows = models.ForeignKey(Category, null=True, blank=True)
     date = models.CharField(max_length=200)
     description = models.TextField(default='', null=True, blank=True,)
 
