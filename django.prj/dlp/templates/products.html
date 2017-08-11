@@ -8,7 +8,10 @@
 		<h2>This are the products we're offering at the moment</h2>
 		<ul>
 			{% for product in products_list %}
+			<!--<li>{{ product.image}}</li>-->
 			<li>{{ product.name }}</li>
+			<li>{{ product.description }}</li>
+			<li>$u {{ product.price }}</li>
 			{% endfor %}
 			</ul>
 		{% else %}
