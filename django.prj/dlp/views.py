@@ -4,7 +4,7 @@ from data.shows import SHOWS_LIST
 from main.models import Member
 from data.news import NEWS
 from data.gallery import GALLERY
-from products.models import Product
+from products.models import Product, Category
 
 def home(request):
     name = request.GET.get('name', 'User')
@@ -28,6 +28,7 @@ def products(request):
     context = {
         'name': name,
         'products_list': Product.objects.all(),
+        'category_list': Category.objects.all(),
     }
 
     return render(request, 'products.html', context)
