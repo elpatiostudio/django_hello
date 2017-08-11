@@ -11,7 +11,7 @@
 			<p><strong>{{ person.name }}</strong> </p>
 			<p> {{ person.instrument }}</p>
 			<p> {{ person.description }}</p>
-			<p> <small> {{ person.gender }} </small> </p> 
+			<p> <small> {{ person.get_gender_display }} </small> </p> 
 		</div>
 	{% endfor %}
 	</div>
