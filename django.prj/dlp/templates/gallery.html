@@ -9,18 +9,21 @@
 <br>
 <div class="row">
  {% for photo in gallery %}
- 	<div class="col s12 m4">     
+ 	<div class="col s3">     
              
-           <img class="materialboxed" data-caption="{{photo.caption}}" style="border-radius: 10px; width:100%;"  src="{{photo.url}}">
+           <img class="materialboxed" data-caption="{{photo.caption}}" style="border-radius: 10px; width:300px; height:300px;"  src="{{photo.url}}">
 <br> 
 
             </div>
  {% endfor %}
 
 <br> 
+
 </div>
 
 
       {%endblock content%}
+
+
 
     
