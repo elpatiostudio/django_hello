@@ -6,12 +6,15 @@
 
 <div class="row">
 	{% for person in members %}
-		 	<div class="col s3 center-align">
+	 	<div class="col s3 center-align">
 			<img src="http://via.placeholder.com/200x200" class="circle">
 			<p><strong>{{ person.name }}</strong> </p>
-			<p> He use's {{ person.instrument }}</p>
-			Information about him: <p> {{ person.description }}</p>
-			<p> <small> {{ person.get_gender_display }} </small> </p> 
+			<p>
+			{% if person.gender == 'M' %}He{% elif person.gender == 'F' %}She{% elif person.gender == 'O' %}Their{% endif %}
+
+			 use's {{ person.instrument }}</p>
+			Information about him: <p> {{ person.description|truncatewords:10 }}</p>
+			<p> <small> {{ person.get_gender_display }} </small> </p>
 		</div>
 	{% endfor %}
 	</div>
